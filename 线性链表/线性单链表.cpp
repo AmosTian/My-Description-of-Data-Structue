@@ -508,7 +508,7 @@ void MergeList(LinkList *La, LinkList *Lb, LinkList *Lc)
 		{
 			pc->next = pa;
 			pc = pa;
-			pa = pc->next;
+			pa = pc->next; 
 		}
 		else
 		{
