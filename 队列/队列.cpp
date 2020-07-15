@@ -1,8 +1,8 @@
-// ╤сап.cpp : ╤╗рЕ©ьжфл╗с╕сцЁлпР╣дхК©з╣Ц║ё
-//╤сап╣да╢й╫╢Ф╢╒╫А╧╧
+О╩©// И≤÷Е┬≈.cpp : Е╝ Д╧┴Ф▌╖Е┬╤Е▐╟Е╨■Г■╗Г╗▀Е╨▐Г └Е┘╔Е▐ёГ┌╧Ц─┌
+//И≤÷Е┬≈Г └И⌠╬Е╪▐Е╜≤Е┌╗Г╩⌠Ф·└
 
 #include "stdafx.h"
-
+#include<cstdio>
 typedef struct QNode
 {
 	QElemType data;
@@ -14,12 +14,12 @@ typedef struct
 	QueuePtr front, rear;
 }LinkQueue;
 
-//ЁУй╪╩╞╤сап
+//Е┬²Е╖▀Е▄√И≤÷Е┬≈
 Status InitQueue(LinkQueue *q)
 {
 	if (!q)
 	{
-		printf("╤сап╡╩╢Фтз!\n");
+		printf("И≤÷Е┬≈Д╦█Е╜≤Е°╗!\n");
 		return ERROR;
 	}
 
@@ -27,7 +27,7 @@ Status InitQueue(LinkQueue *q)
 
 	if (!q->front)
 	{
-		printf("дз╢Ф╥жеДй╖╟э!\n");
+		printf("Е├┘Е╜≤Е┬├И┘█Е╓╠Х╢╔!\n");
 		exit(OVERFLOW);
 	}
 
@@ -36,12 +36,12 @@ Status InitQueue(LinkQueue *q)
 	return OK;
 }
 
-//гЕ©у╤сап
+//Ф╦┘Г╘╨И≤÷Е┬≈
 Status ClearQueue(LinkQueue *q)
 {
 	if (!q)
 	{
-		printf("╤сап╡╩╢Фтз!\n");
+		printf("И≤÷Е┬≈Д╦█Е╜≤Е°╗!\n");
 		return ERROR;
 	}
 
@@ -58,12 +58,12 @@ Status ClearQueue(LinkQueue *q)
 	return OK;
 }
 
-//оЗ╩ы╤сап
+//И■─Ф╞│И≤÷Е┬≈
 Status DestoryQueue(LinkQueue *queue)
 {
 	if (!queue)
 	{
-		printf("╤сап╡╩╢Фтз!\n");
+		printf("И≤÷Е┬≈Д╦█Е╜≤Е°╗!\n");
 		return ERROR;
 	}
 
@@ -76,12 +76,12 @@ Status DestoryQueue(LinkQueue *queue)
 	return OK;
 }
 
-//©у╤сап
+//Г╘╨И≤÷Е┬≈
 Status QueueEmpty(LinkQueue q)
 {
 	if (!&q)
 	{
-		printf("©у╤сап!\n");
+		printf("Г╘╨И≤÷Е┬≈!\n");
 		return ERROR;
 	}
 
@@ -91,13 +91,13 @@ Status QueueEmpty(LinkQueue q)
 		return FALSE;
 }
 
-//╡ЕхКт╙кьeн╙q╣дпб╤сн╡т╙кь
+//Ф▐▓Е┘╔Е┘┐Г╢═eД╦╨qГ └Ф√╟И≤÷Е╟╬Е┘┐Г╢═
 Status EnQueue(LinkQueue *q, QElemType e)
 {
 	QueuePtr p = (QueuePtr)malloc(1 * sizeof(QNode));
 	if (!q)
 	{
-		printf("дз╢Ф╥жеДй╖╟э!\n");
+		printf("Е├┘Е╜≤Е┬├И┘█Е╓╠Х╢╔!\n");
 		return ERROR;
 	}
 
@@ -109,18 +109,18 @@ Status EnQueue(LinkQueue *q, QElemType e)
 	return OK;
 }
 
-//ЁЖ╤с
+//Е┤╨И≤÷
 Status DeQueue(LinkQueue *q, QElemType *e)
 {
 	if (!q)
 	{
-		printf("╤сап╡╩╢Фтз!\n");
+		printf("И≤÷Е┬≈Д╦█Е╜≤Е°╗!\n");
 		return ERROR;
 	}
 
 	if (QueueEmpty(*q))
 	{
-		printf("©у╤сап!\n");
+		printf("Г╘╨И≤÷Е┬≈!\n");
 		return ERROR;
 	}
 
@@ -136,12 +136,12 @@ Status DeQueue(LinkQueue *q, QElemType *e)
 	return OK;
 }
 
-//╤сапЁ╓╤х
+//И≤÷Е┬≈И∙©Е╨╕
 Status QueueLength(LinkQueue q)
 {
 	if (!&q)
 	{
-		printf("╡╩╢Фтз!\n");
+		printf("Д╦█Е╜≤Е°╗!\n");
 		return ERROR;
 	}
 
@@ -157,18 +157,18 @@ Status QueueLength(LinkQueue q)
 	return len;
 }
 
-//╩Ях║╤сйвт╙кь
+//Х▌╥Е▐√И≤÷И╕√Е┘┐Г╢═
 Status GetHead(LinkQueue q, QElemType *e)
 {
 	if (!(&q))
 	{
-		printf("╤сап╡╩╢Фтз!\n");
+		printf("И≤÷Е┬≈Д╦█Е╜≤Е°╗!\n");
 		return ERROR;
 	}
 
 	if (QueueEmpty(q))
 	{
-		printf("©у╤сап!\n");
+		printf("Г╘╨И≤÷Е┬≈!\n");
 		return ERROR;
 	}
 
@@ -177,24 +177,24 @@ Status GetHead(LinkQueue q, QElemType *e)
 	return OK;
 }
 
-//╥цнй╨╞йЩ
+//Х╝©И≈╝Е┤╫Ф∙╟
 Status visit(QElemType e)
 {
 	printf("%d ",e);
 	return OK;
 }
 
-//╠ИюЗ╤сап
+//И│█Е▌├И≤÷Е┬≈
 Status QueueTraverse(LinkQueue q, Status(*visit)(QElemType e))
 {
 	if (!(&q))
 	{
-		printf("╤сап╡╩╢Фтз!\n");
+		printf("И≤÷Е┬≈Д╦█Е╜≤Е°╗!\n");
 		return ERROR;
 	}
 	if (QueueEmpty(q))
 	{
-		printf("╤сапн╙©у!\n");
+		printf("И≤÷Е┬≈Д╦╨Г╘╨!\n");
 		return ERROR;
 	}
 
@@ -216,16 +216,16 @@ int main()
 
 	InitQueue(&que);
 	
-	printf("йДхК╤сапт╙кьйЩа©:\n");
+	printf("Х╬⌠Е┘╔И≤÷Е┬≈Е┘┐Г╢═Ф∙╟И┤▐:\n");
 	scanf_s("%d", &n);
-	printf("йДхК╤сапжпт╙кь:\n");
+	printf("Х╬⌠Е┘╔И≤÷Е┬≈Д╦╜Е┘┐Г╢═:\n");
 	while (n--)
 	{
 		scanf_s("%d",&data);
 		EnQueue(&que, data);
 	}
 
-	printf("╠ИюЗ╤сап:\n");
+	printf("И│█Е▌├И≤÷Е┬≈:\n");
 	QueueTraverse(que, visit);
 	printf("\n");
 
@@ -233,18 +233,18 @@ int main()
 	/*
 	DestoryQueue(&que);
 
-	printf("╠ИюЗ╤сап:\n");
+	printf("И│█Е▌├И≤÷Е┬≈:\n");
 	QueueTraverse(que, visit);
 	printf("\n");
 
 	DeQueue(&que, &data);
-	printf("╤сйв╡©т╙кьйг:%d\n", data);
-	printf("╠ИюЗ╤сап:\n");
+	printf("И≤÷И╕√И┐╗Е┘┐Г╢═Ф≤╞:%d\n", data);
+	printf("И│█Е▌├И≤÷Е┬≈:\n");
 	QueueTraverse(que, visit);
 	
 	GetHead(que, &data);
-	printf("╤сапйвт╙кьйг:%d\n",data);
-	printf("Ё╓╤х:%d\n", QueueLength(que));
+	printf("И≤÷Е┬≈И╕√Е┘┐Г╢═Ф≤╞:%d\n",data);
+	printf("И∙©Е╨╕:%d\n", QueueLength(que));
 	DeQueue(&que, &data);
 	printf("%d\n", que.front->next->next->data);
 	*/
